@@ -1,7 +1,7 @@
 const peliculas = require("./moviesData");
 
     
-
+// callback: 
 const getMovieById = (id, callback) => {
     const pelicula = peliculas.find((peli) => {
         return peli.id == id;
@@ -15,12 +15,10 @@ const getMovieById = (id, callback) => {
 }
 
 
+// promesas:
 const getMovieByTitle = (title) => {
     return new Promise((resolve, reject) => { 
         setTimeout(() => {
-            console.log("********************************************************");
-            console.log("                   CON PROMESAS                         ");
-            console.log("********************************************************"); 
             const pelis = peliculas.filter((peli) => {              
               return peli.title.startsWith(title);
             })
@@ -28,28 +26,17 @@ const getMovieByTitle = (title) => {
                 resolve(pelis)
             }
              reject(`No se ha encontrado ninguna película que empiece por ${title}`)
-                
-                    
             
         }, 2000)       
             
     })
-}
-
-/* getMovieByTitle("The")
-.then((resultado) => {   
-       console.log(resultado)   
-})
-.catch(error => console.log(error))  */
+} 
 
    
-
+// async - await: 
  const getMovieByShowtimes = (times)=> {
     return new Promise((resolve, reject) => { 
-        setTimeout(() => {
-            console.log("********************************************************");
-            console.log("                   CON ASYNC - AWAIT                    ");
-            console.log("********************************************************");   
+        setTimeout(() => {  
             const horarios = peliculas.filter(peli => {
                 return peli.showtimes.includes(times);
             })
@@ -57,21 +44,9 @@ const getMovieByTitle = (title) => {
                 resolve(horarios)
             }
             reject(`No se ha encontrado ninguna película que comience a las ${times}`)
-        }, 4000)
+        }, 2000)
     })
  }
 
- const getShowTimes = async (hora) => {
-     try {
-         const result = await getMovieByShowtimes(hora);  // espera a que se ejecute getMovieByShowTimes() para pasarle el valor a result
-         console.log(result);
-     }
-     catch(error) {
-        console.log(error)
-     }
-}
 
-// getShowTimes("15:30");  
-
-
- module.exports = { getMovieById, getMovieByTitle, getShowTimes }
+ module.exports = { getMovieById, getMovieByTitle, getMovieByShowtimes }
