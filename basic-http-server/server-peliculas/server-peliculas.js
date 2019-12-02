@@ -67,20 +67,20 @@ const server = http.createServer((request, response) => {
             case `/getMovieByShowtimes?${query}`:                     
             const {times} = querystring.parse(query);            
             
-                const getShowTimes = async (times) => {
-                    try {
-                        const result = await getMovieByShowtimes(times);  // espera a que se ejecute getMovieByShowTimes() para pasarle el valor a result
-                        response.statusCode = 200; 
-                        response.setHeader("Content-type", "text/plain");
-                        response.end(JSON.stringify(result));
-                    }
-                    catch(error) {
-                        response.statusCode = 404;
-                        response.setHeader("Content-type", "text/plain");
-                        response.end(error);
-                    }
-               }
-               getShowTimes(times);
+            const getShowTimes = async (times) => {
+                try {
+                    const result = await getMovieByShowtimes(times);  // espera a que se ejecute getMovieByShowTimes() para pasarle el valor a result
+                    response.statusCode = 200; 
+                    response.setHeader("Content-type", "text/plain");
+                    response.end(JSON.stringify(result));
+                }
+                catch(error) {
+                    response.statusCode = 404;
+                    response.setHeader("Content-type", "text/plain");
+                    response.end(error);
+                }
+            }
+            getShowTimes(times);
 
             break;
 
