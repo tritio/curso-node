@@ -1,0 +1,10 @@
+body {
+    background: rosybrown;
+}
+
+.box {
+    text-align: center;
+    border-radius: 20px;
+    width: 500px;
+    border: 20 dashed red;
+}
