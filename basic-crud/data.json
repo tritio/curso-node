@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "username": "Pepa",
+        "password": "1234",
+        "age": 30,
+        "email": "pepa@gmail.com"
+    },
+    {
+        "id": 3,
+        "username": "jalisafasdfasdfasdco",
+        "password": "1235554",
+        "age": 30,
+        "email": "pepa@gmail.com"
+    },
+    null
+]
