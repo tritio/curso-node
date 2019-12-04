@@ -1,11 +1,5 @@
 [
-    {
-        "id": 1,
-        "username": "Pepa",
-        "password": "1234",
-        "age": 30,
-        "email": "pepa@gmail.com"
-    },
+    null,
     {
         "id": 3,
         "username": "jalisafasdfasdfasdco",
@@ -13,5 +7,26 @@
         "age": 30,
         "email": "pepa@gmail.com"
     },
-    null
+    null,
+    {
+        "id": 4,
+        "username": "hola hola otro",
+        "password": "56789",
+        "age": 25,
+        "email": "holita@hotmail.com"
+    },
+    {
+        "id": 5,
+        "username": "Jose",
+        "password": "5433",
+        "age": 36,
+        "email": "Jose@gmail.com"
+    },
+    {
+        "id": 6,
+        "username": "Jose",
+        "password": "5433",
+        "age": 36,
+        "email": "Jose@gmail.com"
+    }
 ]
