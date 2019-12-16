@@ -20,8 +20,7 @@ const userSchema = new Schema({
         required: [ true, "password es obligatorio"]
     },
     state: {
-        type: Boolean,
-        required: [ true, "state es obligatorio"],
+        type: Boolean,       
         default: true // valor por defecto
     },
     role: {
@@ -31,7 +30,14 @@ const userSchema = new Schema({
             values: ["USER_ROLE", "ADMIN_ROLE"],
             message: "{VALUE} no es un valor válido"
         }
+    },
+    fecha: {
+        type: Date,
+        default: Date.now
     }
+}, { 
+    timestamps: true,
+    createdAt: true
 })
 
 
