@@ -1,0 +1,19 @@
+<h1>Beers</h1>
+
+
+<div class="card-columns">
+{{#each cervezas}}
+
+  <div class="card">
+    <img src="{{this.image_url}}" class="card-img-top image-beer" alt="..." >
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+      <p class="card-text">{{this.description}}</p>
+    </div>
+  </div>
+
+<a href="/beers/details/{{this.id}}" class="btn btn-primary">Ver más</a>
+
+{{/each}}
+
+</div>

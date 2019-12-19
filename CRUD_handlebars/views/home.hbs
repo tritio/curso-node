@@ -1,0 +1,25 @@
+
+    {{#if nombre}}
+    <h1>Hola buenas {{nombre}}</h1>
+
+    {{else}}
+    <h3> Hola sin nombre</h3>
+
+    {{/if}}
+
+
+    <ul>
+        {{#each ciudades}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+
+    {{#unless nombre}} <!-- unless si no hay algo -->
+     <h4>pinto otra cosa usando unless si no hay algo </h4>
+
+     {{else}}
+
+        {{nombre}}
+
+    {{/unless}}
